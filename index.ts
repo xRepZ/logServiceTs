@@ -1,10 +1,10 @@
 require('dotenv').config()
-const express = require("express")
-const sequelize = require('./db')
-const models = require('./models/models')
-const cors = require('cors')
-const router = require('./routes/index')
-const errorHandler = require('./middleware/errorHandle')
+import express from 'express'
+import { sequelize } from './db'
+import { LogsModel } from './models/models'
+import cors from 'cors'
+import router from './routes/index'
+import {errorHandler} from './middleware/errorHandle'
 
 const PORT = process.env.PORT
 
@@ -28,4 +28,3 @@ const start = async () => {
 }
 
 start()
-

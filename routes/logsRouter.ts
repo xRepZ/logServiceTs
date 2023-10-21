@@ -1,7 +1,10 @@
-const Router = require('express')
-const router = new Router
-const logController = require('../controllers/logController')
+import { Router } from "express"
+import { LogController } from '../controllers/logController'
 
-router.post('/createlog', logController.add)
+const router = Router()
 
-module.exports = router
+
+router.post('/log', LogController.add)
+router.get('/log/filter', LogController.getAllActions)
+
+export default router

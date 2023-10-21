@@ -1,12 +1,8 @@
-const sequelize = require('../db')
-const {DataTypes} = require('sequelize')
+import { sequelize } from '../db'
+import { DataTypes } from 'sequelize'
 
-const LogsModel = sequelize.define('users_model', {
+export const LogsModel = sequelize.define('users_model', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    user_id: {type: DataTypes.STRING},
-    action: {type: DataTypes.STRING},
+    user_id: {type: DataTypes.INTEGER},
+    action: {type: DataTypes.ENUM('CREATED', 'UPDATED')},
 })
-
-module.exports = {
-    LogsModel,
-}

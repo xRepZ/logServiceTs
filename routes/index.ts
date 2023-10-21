@@ -1,7 +1,10 @@
-const Router = require('express')
-const router = new Router
-const logsRouter = require('./logsRouter')
+import { Router } from "express"
+import logsRouter from './logsRouter'
 
-router.use('/log', logsRouter)
+const router = Router()
 
-module.exports = router
+
+router.use('/', logsRouter)
+
+
+export default router
