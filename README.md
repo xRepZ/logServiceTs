@@ -19,4 +19,6 @@
       выход: logs[]
     возможные параметры:
       limit -- пагинация,
-      page -- страница
+      page -- страница,
+      user_id -- id пользователя,
+      action -- CREATED/UPDATED.
